@@ -1,4 +1,6 @@
 import ReactDOM from 'react-dom/client'
+import { ConfigProvider } from 'antd'
+import zhCN from 'antd/locale/zh_CN'
 import './index.css'
 import { createBrowserRouter, RouterProvider, type RouteObject } from 'react-router-dom'
 import { Index } from './pages/index/Index'
@@ -65,4 +67,8 @@ const routes: RouteObject[] = [
 export const router = createBrowserRouter(routes)
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-root.render(<RouterProvider router={router} />)
+root.render(
+  <ConfigProvider locale={zhCN}>
+    <RouterProvider router={router} />
+  </ConfigProvider>,
+)

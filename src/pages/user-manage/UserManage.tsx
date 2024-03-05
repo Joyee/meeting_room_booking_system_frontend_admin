@@ -6,7 +6,7 @@ import { freezeUser, requestGetUserList } from '../../instance/user-manage'
 import dayjs from 'dayjs'
 import { useForm } from 'antd/es/form/Form'
 
-interface UserItemProp {
+export interface UserItemProp {
   id: number
   username: string
   nickName: string

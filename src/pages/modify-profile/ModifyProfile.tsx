@@ -3,7 +3,7 @@ import { useForm } from 'antd/es/form/Form'
 import { useCallback, useEffect } from 'react'
 import './style.css'
 import { HeadPicUpload } from './HeadPicUpload'
-import { getUpdateCaptcha, requestGetUserInfo, updateUserInfo } from '../../instance/user-manager'
+import { getUpdateCaptcha, requestGetUserInfo, updateUserInfo } from '../../instance/user-manage'
 
 export interface UserInfo {
   username: string

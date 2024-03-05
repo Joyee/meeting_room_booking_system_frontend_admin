@@ -2,7 +2,7 @@ import { Button, Form, Input, message } from 'antd'
 import { useForm } from 'antd/es/form/Form'
 import { useCallback, useEffect } from 'react'
 import './style.css'
-import { getUpdatePasswordCaptcha, requestGetUserInfo, updatePassword } from '../../instance/user-manager'
+import { getUpdatePasswordCaptcha, requestGetUserInfo, updatePassword } from '../../instance/user-manage'
 import { router } from '../..'
 
 export interface UpdatePassword {

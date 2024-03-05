@@ -1,8 +1,8 @@
 import { Badge, Button, Form, Input, Table, message } from 'antd'
 import { useCallback, useEffect, useState } from 'react'
 import { type ColumnsType } from 'antd/es/table'
-import './user-manager.css'
-import { freezeUser, requestGetUserList } from '../../instance/user-manager'
+import './user-manage.css'
+import { freezeUser, requestGetUserList } from '../../instance/user-manage'
 import dayjs from 'dayjs'
 import { useForm } from 'antd/es/form/Form'
 
@@ -22,7 +22,7 @@ interface SearchProps {
   nickName: string
 }
 
-export function UserManager() {
+export function UserManage() {
   const [totalCount, setTotalCount] = useState(0)
   const [dataSource, setDataSource] = useState<UserItemProp[]>([])
   const [pageNo, setPageNo] = useState(1)
@@ -38,7 +38,6 @@ export function UserManager() {
 
   const onFreeze = useCallback(async (id: number) => {
     const res = await freezeUser(id)
-    console.log(res)
     if (res.status === 200) {
       const { code, message: msg, data } = res.data
       if (code === 200) {

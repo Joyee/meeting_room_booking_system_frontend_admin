@@ -3,12 +3,15 @@ import './index.css'
 import { createBrowserRouter, RouterProvider, type RouteObject } from 'react-router-dom'
 import { Index } from './pages/index/Index'
 import { ErrorPage } from './pages/error-page/ErrorPage'
-import { UserManager } from './pages/user-manager/UserManager'
+import { UserManage } from './pages/user-manage/UserManage'
 import { Login } from './pages/login/Login'
 import { Menu } from './pages/menu/Menu'
 import { ModifyMenu } from './pages/modify-menu/ModifyMenu'
 import { ModifyProfile } from './pages/modify-profile/ModifyProfile'
 import { ModifyPassword } from './pages/modify-password/ModifyPassword'
+import { MeetingRoomManage } from './pages/meeting-room-manage/MeetingRoomManage'
+import { BookingManage } from './pages/booking-manage/BookingMange'
+import { Statistic } from './pages/statistic/Statistic'
 
 const routes: RouteObject[] = [
   {
@@ -21,8 +24,20 @@ const routes: RouteObject[] = [
         element: <Menu />,
         children: [
           {
-            path: '/user_manager',
-            element: <UserManager />,
+            path: '/meeting_room_manage',
+            element: <MeetingRoomManage />,
+          },
+          {
+            path: '/booking_manage',
+            element: <BookingManage />,
+          },
+          {
+            path: '/statistic',
+            element: <Statistic />,
+          },
+          {
+            path: '/user_manage',
+            element: <UserManage />,
           },
         ],
       },

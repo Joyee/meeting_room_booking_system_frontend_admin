@@ -5,3 +5,15 @@ export interface UserInfo {
   email?: string
   captcha: string
 }
+
+export interface MeetingRoomItem {
+  id: number
+  name: string
+  capacity: number
+  location: string
+  equipment: string
+  description: string
+  isBooked: boolean
+  createTime: string
+  updateTime: string
+}

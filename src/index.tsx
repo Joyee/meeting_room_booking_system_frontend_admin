@@ -6,6 +6,9 @@ import { ErrorPage } from './pages/error-page/ErrorPage'
 import { UserManager } from './pages/user-manager/UserManager'
 import { Login } from './pages/login/Login'
 import { Menu } from './pages/menu/Menu'
+import { ModifyMenu } from './pages/modify-menu/ModifyMenu'
+import { ModifyProfile } from './pages/modify-profile/ModifyProfile'
+import { ModifyPassword } from './pages/modify-password/ModifyPassword'
 
 const routes: RouteObject[] = [
   {
@@ -23,6 +26,20 @@ const routes: RouteObject[] = [
           },
         ],
       },
+      {
+        path: '/user',
+        element: <ModifyMenu />,
+        children: [
+          {
+            path: 'modify_profile',
+            element: <ModifyProfile />,
+          },
+          {
+            path: 'modify_password',
+            element: <ModifyPassword />,
+          },
+        ],
+      },
     ],
   },
   {
@@ -30,7 +47,7 @@ const routes: RouteObject[] = [
     element: <Login />,
   },
 ]
-const router = createBrowserRouter(routes)
+export const router = createBrowserRouter(routes)
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(<RouterProvider router={router} />)

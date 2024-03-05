@@ -1,0 +1,7 @@
+.user-manager-container {
+  width: 100%;
+}
+
+.user-manager-container .search-container {
+  margin-bottom: 16px;
+}
